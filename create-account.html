@@ -57,7 +57,7 @@
 
 <!-- PAGE CONTENT -->
 <div class="d-flex justify-content-center">
-	<form class="col-md-6 sign-in-form" onSubmit="return checkPassword(this)">
+	<form class="col-md-6 sign-in-form" method="post" onSubmit="accountCreated(this)" action="index.html">
 		<div>
 			<h2>Create your account</h2>
 		</div>
@@ -136,7 +136,6 @@
 			return false; 
 		}
 		
-		var res; 
 		var str = password1;
 		// If password doesn't meet requirements
 		if (!str.match(/[a-z]/g) && 
@@ -147,9 +146,14 @@
 			!str.length >= 8) {			
 			alert ("\nPassword is not strong enough.\nPlease check the tooltip for all requirements!")
 			return false; 
-		} 
+		}
 		return true;
 	} 
+	function accountCreated(form) {
+		if (checkPassword(form)) {
+			alert("\nSuccess!\nYour acount has been created.\nYou will receive an email when the administrator approves your account!");
+		}
+	}
 </script>
 </body>
 	
