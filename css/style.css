@@ -1,0 +1,66 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* COMMON ELEMENTS */
+body {
+	padding-top: 50px;
+}
+.row {
+	margin-top: 25px;
+}
+.btn {
+	background-color: #51D251;
+  	border-radius: 5px;
+	width: 75%;
+	text-transform: uppercase;
+	color: #fff;
+	font-weight: 600;
+	font-size: 130%;	
+	box-shadow: 0 5px 4px #445262;
+}
+.btn:focus {
+	border: 0;
+	box-shadow: 0 5px 4px #445262;
+}
+.btn:hover {
+	background-color: #30b830;
+	color: #fff;
+	cursor: pointer;
+}
+.btn:active {
+	background-color: #30b830;
+	box-shadow: 0 2px 1px #343f4b;
+	transform: translateY(2px);
+}
+.search-btn {
+	width: auto;
+	font-weight: auto;
+	font-size: 95%;	
+}
+.logo-background {	
+	background-color: #000;
+	padding: 50px 0 50px 0;
+	height: 100%;
+}
+.logo-background p {
+	color: #FFF;
+}
+.logo-background img {
+	max-width: 100%;
+	max-height: 100vh;
+	margin: auto;	
+}
+
+/* SIGN IN PAGE */
+.sign-in-form {
+	margin: 40px 0 40px 0;
+}
+.sign-in-form .bottom-links {
+	margin-top: 20px;
+}
+.sign-in-form h2 {
+	margin-bottom: 15px;
+}
+.sign-in-form p {
+	margin-bottom: 7px;
+}
