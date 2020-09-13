@@ -81,6 +81,9 @@ input[type=password] {
 	width: 105%;
 	margin-bottom: 0px;
 }
+#signinpassword {
+	width: 100%;
+}
 .help-icon {
 	position: relative;
 	margin-bottom: 15px;

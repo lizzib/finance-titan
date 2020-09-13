@@ -116,38 +116,39 @@
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap-4.4.1.js"></script>
 <script>
+	// enable tooltips and popovers
 	$('[data-toggle="tooltip"]').tooltip();
 	$('[data-toggle="popover"]').popover();
 	
+	// return true if first character is a letter
 	function isLetter(str) {
 		var first = str.charAt(0);
   		return first.match(/[A-Z|a-z]/i);
 	}
-	// Function to check Whether both passwords is same or not. 
+	// Function to check whether password is valid. 
     function checkPassword(form) { 
 		password1 = form.password.value; 
 		password2 = form.passwordcheck.value; 
 
-		// If password not entered 
+		// If password doesn't match retype password 
 		if (password1 != password2) { 
-			alert ("\nPassword did not match: Please try again...") 
+			alert ("\nPasswords did not match. Please try again.") 
 			return false; 
 		}
+		
 		var res; 
 		var str = password1;
-		if (str.match(/[a-z]/g) && 
-			str.match(/[A-Z]/g) && 
-			str.match(/[0-9]/g) && 
-			str.match(/[^a-zA-Z\d]/g) &&
-			isLetter(str) &&
-			str.length >= 8) {			
-			res = true; 
-		} 
-		else { 
+		// If password doesn't meet requirements
+		if (!str.match(/[a-z]/g) && 
+			!str.match(/[A-Z]/g) && 
+			!str.match(/[0-9]/g) && 
+			!str.match(/[^a-zA-Z\d]/g) &&
+			!isLetter(str) &&
+			!str.length >= 8) {			
 			alert ("\nPassword is not strong enough.\nPlease check the tooltip for all requirements!")
-			return false;
-		}
-		return res
+			return false; 
+		} 
+		return true;
 	} 
 </script>
 </body>
