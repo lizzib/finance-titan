@@ -8,7 +8,7 @@ body {
 .row {
 	margin-top: 25px;
 }
-.btn, .btn-primary {
+.btn {
 	background-color: #51D251;
   	border-radius: 5px;
 	width: 75%;
@@ -18,16 +18,18 @@ body {
 	font-size: 130%;	
 	box-shadow: 0 5px 4px #445262;
 }
-.btn:focus, .btn-primary:focus {
+.btn:focus {
 	border: 0;
 	box-shadow: 0 5px 4px #445262;
+	color: #fff;
+  	background-color: #51D251;
 }
-.btn:hover, .btn-primary:hover {
+.btn:hover {
 	background-color: #30b830;
 	color: #fff;
 	cursor: pointer;
 }
-.btn:active, .btn-primary:active {
+.btn:active {
 	background-color: #30b830;
 	box-shadow: 0 2px 1px #343f4b;
 	transform: translateY(2px);
@@ -53,7 +55,10 @@ body {
 
 /* SIGN IN PAGE */
 .sign-in-form {
-	margin: 40px 0 40px 0;
+	margin: 20px 0 20px 0;
+	padding: 20px 20px 40px 20px;
+	border-radius: 12px;
+	border: 1.5px solid #2B3450
 }
 .sign-in-form .bottom-links {
 	margin-top: 20px;
